@@ -9,14 +9,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "@paper-design/shaders-react": "^0.0.60",
     "@vercel/analytics": "latest",
+    "clsx": "^2.1.1",
     "geist": "latest",
     "lucide-react": "^0.454.0",
-    "next": "14.2.25",
+    "next": "15.1.0",
     "react": "^19",
     "react-dom": "^19",
-    "tailwind-merge": "^2.5.5",
-    "clsx": "^2.1.1"
+    "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.9",

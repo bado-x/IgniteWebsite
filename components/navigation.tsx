@@ -21,6 +21,18 @@ export function Navigation() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
           <a
+            href="#home"
+            className="text-white/80 hover:text-orange-500 transition-colors duration-300 text-sm font-medium relative group font-syne no-underline"
+            onClick={(e) => {
+              e.preventDefault()
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }}
+          >
+            Home
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300" />
+          </a>
+
+          <a
             href="#about"
             className="text-white/80 hover:text-orange-500 transition-colors duration-300 text-sm font-medium relative group font-syne no-underline"
             onClick={(e) => {
@@ -92,6 +104,18 @@ export function Navigation() {
       {isOpen && (
         <div className="md:hidden bg-black/95 backdrop-blur-md border-t border-white/10 shadow-lg">
           <div className="px-6 py-4 space-y-4">
+            <a
+              href="#home"
+              className="block text-white hover:text-orange-500 transition-colors duration-300 text-lg font-medium font-syne py-3 border-b border-white/10 no-underline"
+              onClick={(e) => {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+                setIsOpen(false)
+              }}
+            >
+              Home
+            </a>
+
             <a
               href="#about"
               className="block text-white hover:text-orange-500 transition-colors duration-300 text-lg font-medium font-syne py-3 border-b border-white/10 no-underline"

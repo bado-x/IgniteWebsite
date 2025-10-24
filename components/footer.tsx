@@ -44,11 +44,19 @@ export function Footer() {
           >
             <h4 className="text-white font-bold mb-4 font-syne">Quick Links</h4>
             <ul className="space-y-2">
-              {["About", "Services", "Contact"].map((link) => (
+              {["Home", "About", "Services", "Contact"].map((link) => (
                 <li key={link}>
                   <a
-                    href={`#${link.toLowerCase()}`}
-                    className="text-white/60 hover:text-white transition-colors duration-300"
+                    href={link === "Home" ? "#home" : `#${link.toLowerCase()}`}
+                    className="text-white/60 hover:text-orange-500 transition-colors duration-300"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      if (link === "Home") {
+                        window.scrollTo({ top: 0, behavior: 'smooth' })
+                      } else {
+                        document.getElementById(link.toLowerCase())?.scrollIntoView({ behavior: 'smooth' })
+                      }
+                    }}
                   >
                     {link}
                   </a>
