@@ -8,11 +8,14 @@
   body {
     background-color: black;
     color: white;
+  }
+
+  * {
     font-family: var(--font-syne), system-ui, sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-syne), system-ui, sans-serif;
+  .font-syne {
+    font-family: var(--font-syne), system-ui, sans-serif !important;
   }
 }
 

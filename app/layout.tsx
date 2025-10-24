@@ -13,6 +13,7 @@ const syne = Syne({
   display: "swap",
   variable: "--font-syne",
   weight: ["400", "500", "600", "700"],
+  fallback: ["system-ui", "arial"],
 })
 
 export const metadata: Metadata = {
@@ -55,7 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${syne.variable} antialiased`}>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className={`${syne.className} ${GeistSans.variable} ${GeistMono.variable}`}>
         <Preloader />
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
